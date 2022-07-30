@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HP\\Desktop\\Artsofte\\Artsofte\\Artsofte.csproj": {}
+    "C:\\Users\\HP\\Desktop\\New folder (6)\\Artsofte\\Artsofte\\Artsofte.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HP\\Desktop\\Artsofte\\Artsofte\\Artsofte.csproj": {
+    "C:\\Users\\HP\\Desktop\\New folder (6)\\Artsofte\\Artsofte\\Artsofte.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\Desktop\\Artsofte\\Artsofte\\Artsofte.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\Desktop\\New folder (6)\\Artsofte\\Artsofte\\Artsofte.csproj",
         "projectName": "Artsofte",
-        "projectPath": "C:\\Users\\HP\\Desktop\\Artsofte\\Artsofte\\Artsofte.csproj",
+        "projectPath": "C:\\Users\\HP\\Desktop\\New folder (6)\\Artsofte\\Artsofte\\Artsofte.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\Desktop\\Artsofte\\Artsofte\\obj\\",
+        "outputPath": "C:\\Users\\HP\\Desktop\\New folder (6)\\Artsofte\\Artsofte\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -57,6 +57,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[3.1.27, )"
+            },
+            "Microsoft.Owin": {
+              "target": "Package",
+              "version": "[4.2.2, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",

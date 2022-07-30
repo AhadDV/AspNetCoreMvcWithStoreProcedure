@@ -293,3 +293,5 @@ C:\Users\HP\Desktop\Artsofte\Artsofte\obj\Debug\netcoreapp3.1\Razor\Views\Employ
 C:\Users\HP\Desktop\Artsofte\Artsofte\bin\Debug\netcoreapp3.1\AutoMapper.dll
 C:\Users\HP\Desktop\Artsofte\Artsofte\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\HP\Desktop\Artsofte\Artsofte\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\HP\Desktop\Artsofte\Artsofte\bin\Debug\netcoreapp3.1\Microsoft.Owin.dll
+C:\Users\HP\Desktop\Artsofte\Artsofte\bin\Debug\netcoreapp3.1\Owin.dll

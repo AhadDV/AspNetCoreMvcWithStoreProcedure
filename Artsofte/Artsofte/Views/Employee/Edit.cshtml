@@ -10,7 +10,7 @@
                 <div class="card rounded-3">
 
                     <div class="card-body p-4 p-md-5">
-                        <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Add Employee</h3>
+                        <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Edit Employee</h3>
 
                         <form method="post" class="px-md-2">
 
@@ -37,7 +37,7 @@
                                 <div class="row justify-content-between">
                                     <div class="col-md-6">
                                         <select asp-for="@Model.DepartmentId" class=" departament select">
-                                            <option>Choose Department</option>
+                                           
                                             @foreach (Department department in ViewBag.Departments)
                                             {
                                                 @if (department.Id == Model.DepartmentId)
@@ -88,26 +88,12 @@
     </div>
 </section>
 @section Scripts{
-    <script>
-        $(document).ready(function() {
-            $('.departament').on('change', function() {
-                const id = $(this).val()
-                let p = ""
-                fetch(`/Employee/GetProgammingLanguage/${id}`)
-                    .then(res => res.json())
-                    .then(data => {
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js" integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js" integrity="sha512-o6XqxgrUsKmchwy9G5VRNWSSxTS4Urr4loO6/0hYdpWmFUfHqGzawGxeQGMDqYzxjY9sbktPbNlkIQJWagVZQg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 
-                        $.each(data, function(key, val) {
-
-                            p += ` <option value="${val.id}" >${val.name
-                                }</option>`
-
-                        });
-                        $(".programming").html(p)
-                    })
-            });
-        })
-    </script>
+     <script src="~/js/site.js"></script>
 }
 
 

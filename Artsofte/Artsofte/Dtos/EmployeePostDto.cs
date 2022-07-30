@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
+using System.ComponentModel.DataAnnotations;
 
 namespace Artsofte.Dtos
 {
@@ -16,7 +17,8 @@ namespace Artsofte.Dtos
         [Required]
         [StringLength(20)]
         public string Gender { get; set; }
-        [Required]
+       
+        [Required (ErrorMessage ="Department Name is Required")]
         public int DepartmentId { get; set; }
         [Required]
         public int ProgrammingLanguageId { get; set; }

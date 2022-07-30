@@ -21,6 +21,7 @@ namespace Artsofte
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
+
                   
                 });
     }

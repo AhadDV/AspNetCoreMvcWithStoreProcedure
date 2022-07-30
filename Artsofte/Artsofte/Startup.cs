@@ -1,4 +1,5 @@
 using Artsofte.Dal;
+using Artsofte.Profiles;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -6,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Owin;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,14 +29,25 @@ namespace Artsofte
         {
             services.AddControllersWithViews();
             services.AddDbContext<ArtsofteDbContext>(opt =>
-            {
+           {
                 opt.UseSqlServer(Configuration.GetConnectionString("Default"));
             });
+            services.AddAutoMapper(opt =>
+            {
+                opt.AddProfile(new MapProfile());
+
+            });
+
+
         }
+    
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            
+
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -56,9 +69,13 @@ namespace Artsofte
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-
+                   
                     pattern: "{controller=Employee}/{action=Index}/{id?}");
-            });
+                
+
+        });
         }
     }
+
+    
 }

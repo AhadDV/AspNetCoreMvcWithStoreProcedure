@@ -36,19 +36,15 @@
 
                                 <div class="row justify-content-between">
                                     <div class="col-md-6">
-                                        <select asp-for="@Model.DepartmentId" class=" departament select">
-                                            <option>Choose Department</option>
-                                            @foreach (Department department in ViewBag.Departments)
-                                            {
-                                                <option value="@department.Id">@department.Name</option>
-                                            }
+                                        <select asp-for="@Model.DepartmentId" asp-items="@(new SelectList(ViewBag.Departments,"Id","Name"))" class=" departament select">
+                                            <option >Choose Department</option>
                                         </select>
                                         <br />
-                                        <span asp-validation-for="@Model.DepartmentId" class="text text-danger"></span>
+                                         <span asp-validation-for="@Model.DepartmentId" class="text text-danger"></span>
                                     </div>
                                     <div class="col-md-6">
                                         <select asp-for="@Model.ProgrammingLanguageId" class=" programming select">
-                                            <option value="1">Choose department</option>
+                                            <option >Choose department</option>
                                         </select>
                                         <br />
                                     <span asp-validation-for="@Model.ProgrammingLanguageId" class="text text-danger"></span>
@@ -82,6 +78,8 @@
     </div>
 </section>
 @section Scripts{
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js" integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js" integrity="sha512-o6XqxgrUsKmchwy9G5VRNWSSxTS4Urr4loO6/0hYdpWmFUfHqGzawGxeQGMDqYzxjY9sbktPbNlkIQJWagVZQg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 
