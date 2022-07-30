@@ -1,0 +1,90 @@
+﻿@model EmployeePostDto
+@{
+    ViewData["Title"] = "Add";
+}
+
+<section class="h-100 h-custom">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-lg-8 col-xl-6">
+                <div class="card rounded-3">
+
+                    <div class="card-body p-4 p-md-5">
+                        <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Add Employee</h3>
+
+                        <form method="post" class="px-md-2">
+
+                            <div class="form-outline mb-4">
+                                <input type="text" asp-for="@Model.Name" class="form-control" />
+                                <label class="form-label" asp-for="@Model.Name">Name</label>
+                                <span asp-validation-for="@Model.Name" class="text text-danger"></span>
+                            </div>
+                            <div class="form-outline mb-4">
+                                <input type="text" asp-for="@Model.Surname" class="form-control" />
+                                <label class="form-label" asp-for="@Model.Surname">Surname</label>
+                                <span asp-validation-for="@Model.Surname" class="text text-danger"></span>
+                            </div>
+                            <div class="form-outline mb-4">
+                                <input asp-for="@Model.Age" class="form-control" />
+                                <label class="form-label" asp-for="@Model.Age">Age</label>
+                                <span asp-validation-for="@Model.Age" class="text text-danger"></span>
+                            </div>
+
+
+
+                            <div class="mb-4">
+
+                                <div class="row justify-content-between">
+                                    <div class="col-md-6">
+                                        <select asp-for="@Model.DepartmentId" class=" departament select">
+                                            <option>Choose Department</option>
+                                            @foreach (Department department in ViewBag.Departments)
+                                            {
+                                                <option value="@department.Id">@department.Name</option>
+                                            }
+                                        </select>
+                                        <br />
+                                        <span asp-validation-for="@Model.DepartmentId" class="text text-danger"></span>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <select asp-for="@Model.ProgrammingLanguageId" class=" programming select">
+                                            <option value="1">Choose department</option>
+                                        </select>
+                                        <br />
+                                    <span asp-validation-for="@Model.ProgrammingLanguageId" class="text text-danger"></span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="form-outline mb-4">
+                                    <select asp-for="@Model.Gender" class="select">
+                                        <option  disabled>Gender</option>
+                                        <option value="Female">Female</option>
+                                        <option value="Male">Male</option>
+                                    </select>
+                                    <br />
+                                 <span asp-validation-for="@Model.Gender" class="text text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-between">
+                                <button type="submit" class="btn btn-secondary btn-lg mb-1">Submit</button>
+                                <a asp-validation-for="employee" asp-action="index" class="btn btn-secondary btn-lg mb-1">Cancel</a>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@section Scripts{
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+     <script src="~/js/site.js"></script>
+}
+
