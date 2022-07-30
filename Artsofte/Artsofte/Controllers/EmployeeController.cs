@@ -57,7 +57,8 @@ namespace Artsofte.Controllers
         [HttpGet, Route("employee/edit")]
         public  IActionResult Edit()
         {
-            int id= (int)TempData["Id"];
+            int? id= (int?)TempData["Id"];
+                        if(id== null) return NotFound();
 
             TempData["Id"] = id;
 
