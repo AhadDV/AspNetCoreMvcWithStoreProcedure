@@ -39,13 +39,15 @@
                                         <select asp-for="@Model.DepartmentId" asp-items="@(new SelectList(ViewBag.Departments,"Id","Name"))" class=" departament select">
                                             <option >Choose Department</option>
                                         </select>
+                                      <label class="form-label" asp-for="@Model.DepartmentId">Department</label>
                                         <br />
                                          <span asp-validation-for="@Model.DepartmentId" class="text text-danger"></span>
                                     </div>
                                     <div class="col-md-6">
                                         <select asp-for="@Model.ProgrammingLanguageId" class=" programming select">
-                                            <option >Choose department</option>
+                                            <option >Choose Department</option>
                                         </select>
+                                        <label class="form-label" asp-for="@Model.ProgrammingLanguageId">ProgramingLanguage</label>
                                         <br />
                                     <span asp-validation-for="@Model.ProgrammingLanguageId" class="text text-danger"></span>
                                     </div>
@@ -55,10 +57,10 @@
                             <div class="row">
                                 <div class="form-outline mb-4">
                                     <select asp-for="@Model.Gender" class="select">
-                                        <option  disabled>Gender</option>
                                         <option value="Female">Female</option>
                                         <option value="Male">Male</option>
                                     </select>
+                                    <label class="form-label" asp-for="@Model.Gende">Gender</label>
                                     <br />
                                  <span asp-validation-for="@Model.Gender" class="text text-danger"></span>
                                 </div>
